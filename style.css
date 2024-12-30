@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+main .text-content {
+    font-size: 1.2rem;
+}
+
+main .image-content img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    main {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1025px) {
+    main {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Bonus: Transitions */
+header, main, footer {
+    transition: all 0.3s ease-in-out;
+}
